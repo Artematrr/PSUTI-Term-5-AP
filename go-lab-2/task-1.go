@@ -67,27 +67,38 @@ func Task4() {
 	fmt.Println("Длина строки: ", len(str))
 }
 
+// Task5
+
+// передача с указателем на структуру, чтобы не создавать копию и иметь возм. изменять значения полей (в случае чего, здесь не продемонстрируем)
+func rectangleArea(r *Rectangle) int {
+	return r.width * r.height
+}
+
+type Rectangle struct {
+	width, height int
+}
+
 func Task5() {
 	fmt.Println("\n>> Задача 5")
 
-	type Rectangle struct {
-		width, height int
-	}
-
+	// Экземпляр двумя способами
+	// rect := Rectangle{}
 	var rect Rectangle
-	fmt.Print("Введите длину прямоугольника: ")
+
+	fmt.Print("Введите длину прямоугольника:\t")
 	fmt.Scan(&rect.width)
-	fmt.Print("Введите высоту прямоугольника: ")
+	fmt.Print("Введите высоту прямоугольника:\t")
 	fmt.Scan(&rect.height)
 
-	fmt.Println("Площадь прямоугольника: ", rect.width*rect.height)
+	fmt.Print("Площадь прямоугольника:\t\t", rectangleArea(&rect))
+	println()
 }
 
 func Task6() {
 	fmt.Println("\n>> Задача 6")
 
 	var (
-		a, b int
+		a, b int64
 		c    float64
 	)
 
