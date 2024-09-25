@@ -66,27 +66,26 @@ func Task5() {
 func Task6() {
 	f.Println("\n>> Задача 6")
 
-	var arr = [6]string{"apple", "banana", "cherry", "elderberry", "kiwi", "lemon"}
+	var arr = []string{"яблочко", "банан", "вишня", "груша", "дыня", "ежемалина"}
 	f.Println("Массив строк:\t", arr)
 
-	var max = arr[0]
+	var maxStr = arr[0]
 	for i := 1; i < len(arr); i++ {
-		if len(arr[i]) > len(max) {
-			max = arr[i]
+		if len(arr[i]) > len(maxStr) {
+			maxStr = arr[i]
 		}
 	}
-	f.Println("Длиннющая:\t", max)
+	f.Println("Длиннющая:\t", maxStr)
 
 	slice := arr[:3]
 	f.Println("Срез:\t\t", slice)
 
-	var max1 = slice[0]
+	var maxStrSlice = slice[0]
 	for i := 1; i < len(slice); i++ {
-		if len(slice[i]) > len(max1) {
-			max1 = slice[i]
+		if len(slice[i]) > len(maxStrSlice) {
+			maxStrSlice = slice[i]
 		}
 	}
 
-	f.Println("Длиннющая:\t", max1)
-
+	f.Println("Длиннющая:\t", maxStrSlice)
 }

@@ -34,7 +34,7 @@ def task5():
 
 def task6():
     print("\n>> Задача 6")
-    arr = ["apple", "banana", "cherry", "elderberry", "kiwi", "lemon"]
+    arr = ["яблочко", "банан", "вишня", "груша", "дыня", "ежемалина"]
     print("Массив строк:\t", arr)
     max_str = max(arr, key=len)
     print("Длиннющая:\t", max_str)
